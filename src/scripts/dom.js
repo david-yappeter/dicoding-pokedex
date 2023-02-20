@@ -22,11 +22,11 @@ $(async function () {
     $('<div/>', {
       class: 'poke-container',
       html: `
-      <div class="poke-content" data-id="${pokemon.id}">
+      <div class="poke-content" data-id="${pokemon.id}" data-content="${pokemon.name}">
         <img
+          alt="${pokemon.name}"
           class="poke-img"
           src="${pokemon.sprite_url}" />
-        <p class="game">${pokemon.name}</p>
       </div>
       `,
     }).appendTo('#poke-grid');

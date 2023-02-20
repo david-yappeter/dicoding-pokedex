@@ -6,17 +6,17 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 html, body { 
-    @apply min-h-screen bg-custom-red-boston;
+    @apply min-h-screen bg-gradient-to-r from-custom-red to-custom-red-boston;
 }
 
 p {
     &.game {
-        @apply font-vt323;
+        @apply font-vt323 text-custom-white text-24px;
     }
 }
 
 section {
-    @apply sm:px-100px md:px-150px lg:px-200px xl:px-250px;
+    @apply px-10px sm:px-100px md:px-150px lg:px-200px xl:px-250px;
 }
 
 #poke-grid {
@@ -24,14 +24,17 @@ section {
 }
 
 .poke-container {
-    @apply relative pt-100% bg-custom-blue h-0px;
+    @apply rounded-lg relative pt-100% transition-colors bg-custom-blue h-0px cursor-pointer;
 }
 
 .poke-content {
     @apply absolute top-0 left-0 w-100% h-100% flex flex-col justify-center items-center;
 
+    &:before {
+        @apply content-data-content absolute font-vt323 text-125% text-custom-white bottom-5px;
+    }
 }
 
 .poke-img {
-    @apply w-144px;
+    @apply w-100%;
 }
