@@ -2,10 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+// VT323 Font 
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
-div  {
-    h1,h2 {
-        font-size: 40px;
+html, body { 
+    @apply min-h-screen bg-custom-red-boston;
+}
+
+p {
+    &.game {
+        @apply font-vt323;
     }
 }
 
+section {
+    @apply sm:px-100px md:px-150px lg:px-200px xl:px-250px;
+}
+
+#poke-grid {
+    @apply grid justify-center grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 auto-rows-auto gap-4;
+}
+
+.poke-container {
+    @apply relative pt-100% bg-custom-blue h-0px;
+}
+
+.poke-content {
+    @apply absolute top-0 left-0 w-100% h-100% flex flex-col justify-center items-center;
+
+}
+
+.poke-img {
+    @apply w-144px;
+}
