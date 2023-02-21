@@ -5,11 +5,11 @@ const { EVENT_DATALOADED } = require('./const');
 const apiBaseUrl = 'https://pokeapi.co/api/v2';
 const pokemonApiUrl = `${apiBaseUrl}/pokemon`;
 
-async function DoLoadData() {
+const DoLoadData = async () => {
   try {
     const urlParams = new URLSearchParams(window.location.search);
     const page = urlParams.get('page');
-    const limit = 32;
+    const limit = 24;
 
     const response = (
       await axios.get(pokemonApiUrl, {
@@ -24,7 +24,7 @@ async function DoLoadData() {
   } catch (e) {
     console.log('API ERROR: ', e);
   }
-}
+};
 
 module.exports = {
   DoLoadData,

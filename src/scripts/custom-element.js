@@ -13,7 +13,6 @@ class PokeBox extends HTMLElement {
   render() {
     const pokemon = this._pokemon.detail();
 
-    // this.classList.add('poke-container');
     this.innerHTML = `
     <div class="poke-content" data-id="${pokemon.id}" data-content="${pokemon.name}">
       <img

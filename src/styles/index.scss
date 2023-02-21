@@ -33,7 +33,7 @@ body:before {
 
 p {
     &.game {
-        @apply font-vt323 text-24px;
+        @apply font-vt323 text-20px;
     }
 }
 
@@ -47,17 +47,41 @@ section {
 
 // custom element
 poke-box {
-    @apply rounded-lg relative pt-100% transition-colors bg-custom-whitesmoke h-0px cursor-pointer;
+    @apply rounded-lg relative pt-100% transition-colors bg-custom-whitesmoke hover:bg-custom-gray-disabled h-0px cursor-pointer;
 }
 
 .poke-content {
     @apply absolute top-0 left-0 w-100% h-100% flex flex-col justify-center items-center;
 
     &:before {
-        @apply content-data-content absolute font-vt323 text-125%  bottom-5px;
+        @apply content-data-content absolute font-vt323 text-125%  bottom-5px whitespace-nowrap;
     }
 }
 
 .poke-img {
     @apply w-100%;
+}
+
+#pagination {
+    @apply flex justify-center items-center mt-50px;
+
+    & > * {
+        @apply flex justify-center items-center mx-10px bg-custom-whitesmoke w-30px h-30px rounded-lg transition-colors;
+    }
+
+    & :not(.disabled) {
+        @apply  hover:bg-custom-gray-dark;
+    }
+
+    & .disabled {
+        @apply  bg-custom-gray-disabled;
+    }
+
+    & .active {
+        @apply  border-4px border-custom-black;
+    }
+}
+
+#loader {
+    @apply bg-custom-gray-dark w-10px h-10px rounded-full animate-spin;
 }
