@@ -45,7 +45,8 @@ section {
     @apply grid justify-center grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 auto-rows-auto gap-4;
 }
 
-.poke-container {
+// custom element
+poke-box {
     @apply rounded-lg relative pt-100% transition-colors bg-custom-whitesmoke h-0px cursor-pointer;
 }
 
