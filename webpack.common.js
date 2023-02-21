@@ -46,7 +46,7 @@ module.exports = {
 
     // Extract any CSS from any javascript file to process it as LESS/SASS using a loader
     new MiniCssExtractPlugin({
-      filename: '[name].bundle.css',
+      filename: 'styles/[name].bundle.css',
     }),
 
     // Minify CSS assets

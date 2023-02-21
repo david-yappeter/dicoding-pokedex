@@ -6,17 +6,39 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 html, body { 
-    @apply min-h-screen bg-gradient-to-r from-custom-red to-custom-red-boston;
+    @apply min-h-screen;
+}
+
+html {
+    @apply bg-custom-gray;
+}
+
+body:before {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-position: top right;
+    background-image: url(../assets/pokeball.png);
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    transform: translate(30%, -40%);
+    background-size: 100%;
+}
+
+body:before {
+    @apply w-90vw h-90vw sm:w-35vw sm:h-35vw ;
 }
 
 p {
     &.game {
-        @apply font-vt323 text-custom-white text-24px;
+        @apply font-vt323 text-24px;
     }
 }
 
 section {
-    @apply px-10px sm:px-100px md:px-150px lg:px-200px xl:px-250px;
+    @apply px-10px sm:px-100px md:px-100px lg:px-150px xl:px-200px;
 }
 
 #poke-grid {
@@ -24,14 +46,14 @@ section {
 }
 
 .poke-container {
-    @apply rounded-lg relative pt-100% transition-colors bg-custom-blue h-0px cursor-pointer;
+    @apply rounded-lg relative pt-100% transition-colors bg-custom-whitesmoke h-0px cursor-pointer;
 }
 
 .poke-content {
     @apply absolute top-0 left-0 w-100% h-100% flex flex-col justify-center items-center;
 
     &:before {
-        @apply content-data-content absolute font-vt323 text-125% text-custom-white bottom-5px;
+        @apply content-data-content absolute font-vt323 text-125%  bottom-5px;
     }
 }
 
