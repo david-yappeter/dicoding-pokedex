@@ -1,8 +1,8 @@
-import $ from 'jquery';
-import './custom-element.js';
-import { Pokemon } from './model';
-import { EVENT_DATALOADED } from './const';
-import { DoLoadData } from './request';
+require('./custom-element.js');
+const $ = require('jquery');
+const { Pokemon } = require('./model');
+const { EVENT_DATALOADED } = require('./const');
+const { DoLoadData } = require('./request');
 
 // OnDomContentLoaded
 $(async () => {
@@ -26,7 +26,6 @@ const onInitialize = async () => {
   await DoLoadData();
 };
 
-let currentPage;
 const loadPagination = async (itemCount) => {
   const paginationLimit = 24;
   const maxVisiblePage = 3;

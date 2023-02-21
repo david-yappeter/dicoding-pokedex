@@ -52,7 +52,7 @@ module.exports = {
     // Minify CSS assets
     new CssMinimizerWebpackPlugin({}),
 
-    // copy assets
+    // Copy Assets
     new CopyWebpackPlugin({
       patterns: [
         { from: path.resolve(__dirname, 'src/assets/'), to: 'assets/' },

@@ -1,2 +1,2 @@
-import './styles/index.scss';
-import './scripts/dom.js';
+require('./styles/index.scss');
+require('./scripts/dom.js');
